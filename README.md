@@ -1,4 +1,5 @@
-
+# a digital clock 
+Author - prince gautan
 <html>
 <head>
 <title>Digital_clock</title>
@@ -152,7 +153,7 @@ body{
             </div>
         </div>
     </div>
-    <script>
+    <script>   
      setInterval(() => {
             // for analog clock
             let hh = document.getElementById('hh');
