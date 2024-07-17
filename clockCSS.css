@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #2f3c3e;
+}
+#time{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .circle{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .circle svg{
+    position: relative;
+    transform: rotate(270deg);
+}
+#time .circle:nth-child(1) svg {
+    width: 250px;
+    height: 250px;
+}
+#time .circle:nth-child(2) svg {
+    width: 210px;
+    height: 210px;
+}
+#time .circle:nth-child(3) svg {
+    width: 170px;
+    height: 170px;
+}
+#time .circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: var(--clr);
+    stroke-width: 5;
+    transform: translate(5px,5px);
+    /* opacity: 0.25; */
+}
+ #time .circle:nth-child(1) svg circle{
+    stroke-dasharray: 760;
+    stroke-dashoffset: 760;
+}
+#time .circle:nth-child(2) svg circle{
+    stroke-dasharray: 630;
+    stroke-dashoffset: 630;
+}
+#time .circle:nth-child(3) svg circle{
+    stroke-dasharray: 510;
+    stroke-dashoffset: 510;
+} 
+.dots{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.dots::before{
+ content: '';
+ top: -3;
+ position: absolute;
+ width: 15px;
+ height: 15px;
+ background: var(--clr) ;
+ border-radius: 50%;
+ box-shadow: 0 0 20px var(--clr),
+ 0 0 40px var(--clr),
+ 0 0 60px var(--clr),
+ 0 0 80px var(--clr);
+}
+ .timeBx{
+    display: flex;
+    position: absolute;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    gap: 15px;
+    font-size: 1.38em;
+    font-weight: bold;
+ }
+ .timeBx #hours::after,
+ .timeBx #minutes::after{
+    content: ':';
+    position: absolute;
+ }
+ .timeBx div{
+    color: var(--c);
+    text-shadow: 0 0 20px var(--c),
+    0 0 40px var(--c),
+    0 0 60px var(--c),
+    0 0 80px var(--c);
+ }
+ .ap{
+    position: absolute;
+    transform: translateY(-15px);
+    font-size: 0.5em;
+    right: 56px;
+ }
